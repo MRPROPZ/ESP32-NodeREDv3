@@ -153,11 +153,6 @@ void reconnect() {
       // Once connected, publish an announcement...
       client.publish("outTopic", "hello world");
       // ... and resubscribe
-      client.subscribe("inTopic");
-      // client.subscribe("/relay");
-      client.subscribe("/led/red");
-      client.subscribe("/led/green");
-      client.subscribe("/led/blue");
       client.subscribe("/forward");
       client.subscribe("/backward");
       client.subscribe("/left");
@@ -192,6 +187,4 @@ void loop() {
   }
   client.loop();
 
-  unsigned long now = millis();
-  
 }
